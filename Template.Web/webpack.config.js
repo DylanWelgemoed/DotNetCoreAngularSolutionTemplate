@@ -18,8 +18,11 @@ module.exports = (env) => {
         module: {
             rules: [
                 { test: /\.ts$/, include: /ClientApp/, use: isDevBuild ? ['awesome-typescript-loader?silent=true', 'angular2-template-loader'] : '@ngtools/webpack' },
-                { test: /\.html$/, use: 'html-loader?minimize=false' },
-                { test: /\.css$/, use: [ 'to-string-loader', isDevBuild ? 'css-loader' : 'css-loader?minimize' ] },
+                { test: /\.html$/, use: 'html-loader?minimize=false' }, 
+                {
+                    test: /\.scss$/,
+                    use: ['to-string-loader', 'style-loader', isDevBuild ? 'css-loader' : 'css-loader?minimize', 'sass-loader']
+                },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
         },
