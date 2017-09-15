@@ -1,0 +1,11 @@
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\bin\Debug\netcoreapp2.0\Template.Auth.deps.json
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\bin\Debug\netcoreapp2.0\Template.Auth.runtimeconfig.json
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\bin\Debug\netcoreapp2.0\Template.Auth.runtimeconfig.dev.json
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\bin\Debug\netcoreapp2.0\Template.Auth.dll
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\bin\Debug\netcoreapp2.0\Template.Auth.pdb
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\obj\Debug\netcoreapp2.0\Template.Auth.csprojResolveAssemblyReference.cache
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\obj\Debug\netcoreapp2.0\Template.Auth.csproj.CoreCompileInputs.cache
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\obj\Debug\netcoreapp2.0\Template.Auth.AssemblyInfoInputs.cache
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\obj\Debug\netcoreapp2.0\Template.Auth.AssemblyInfo.cs
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\obj\Debug\netcoreapp2.0\Template.Auth.dll
+C:\Development\DotNetCoreAngularSolutionTemplate\Template.Auth\obj\Debug\netcoreapp2.0\Template.Auth.pdb
