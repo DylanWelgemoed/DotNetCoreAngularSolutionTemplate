@@ -4746,6 +4746,51 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "Template.Business/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Template.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Template.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Template.Business.dll": {}
+        }
+      },
+      "Template.Integration/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Template.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Template.Integration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Template.Integration.dll": {}
+        }
+      },
+      "Template.Interface/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Template.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Template.Interface.dll": {}
+        }
+      },
+      "Template.Mock/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Template.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Template.Mock.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Template.Mock.dll": {}
+        }
       }
     }
   },
@@ -12524,12 +12569,36 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "Template.Business/1.0.0": {
+      "type": "project",
+      "path": "../Template.Business/Template.Business.csproj",
+      "msbuildProject": "../Template.Business/Template.Business.csproj"
+    },
+    "Template.Integration/1.0.0": {
+      "type": "project",
+      "path": "../Template.Integration/Template.Integration.csproj",
+      "msbuildProject": "../Template.Integration/Template.Integration.csproj"
+    },
+    "Template.Interface/1.0.0": {
+      "type": "project",
+      "path": "../Template.Interface/Template.Interface.csproj",
+      "msbuildProject": "../Template.Interface/Template.Interface.csproj"
+    },
+    "Template.Mock/1.0.0": {
+      "type": "project",
+      "path": "../Template.Mock/Template.Mock.csproj",
+      "msbuildProject": "../Template.Mock/Template.Mock.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.0",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "Template.Business >= 1.0.0",
+      "Template.Integration >= 1.0.0",
+      "Template.Interface >= 1.0.0",
+      "Template.Mock >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12564,7 +12633,20 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Mock\\Template.Mock.csproj": {
+              "projectPath": "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Mock\\Template.Mock.csproj"
+            },
+            "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Integration\\Template.Integration.csproj": {
+              "projectPath": "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Integration\\Template.Integration.csproj"
+            },
+            "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Business\\Template.Business.csproj": {
+              "projectPath": "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Business\\Template.Business.csproj"
+            },
+            "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Interface\\Template.Interface.csproj": {
+              "projectPath": "C:\\Development\\DotNetCoreAngularSolutionTemplate\\Template.Interface\\Template.Interface.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

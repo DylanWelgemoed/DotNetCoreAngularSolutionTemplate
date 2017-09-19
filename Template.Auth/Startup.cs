@@ -13,8 +13,6 @@ namespace Template.Auth
 {
     public class Startup
     {
-        private const string SecretKey = "needtogetthisfromenvironment";
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,7 +30,7 @@ namespace Template.Auth
             {
                 options.Issuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
                 options.Audience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)];
-                options.SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(SecretKey)), SecurityAlgorithms.HmacSha256);
+                options.SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtAppSettingOptions["SecretKey"])), SecurityAlgorithms.HmacSha256);
             });
 
             SetInterfaces(services);
@@ -49,6 +47,7 @@ namespace Template.Auth
         }
 
         #region Dependency Injection
+
         private void SetInterfaces(IServiceCollection services)
         {
 #if DEBUG
@@ -69,6 +68,7 @@ namespace Template.Auth
             services.AddTransient<IUserRepository, IntegrationRepos.UserRepository>();
             services.AddTransient<ISecurityRepository, IntegrationRepos.SecurityRepository>();
         }
-        #endregion
+
+        #endregion Dependency Injection
     }
 }
