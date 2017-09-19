@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Template.Auth.Interfaces;
-using Template.Auth.Models;
+using Template.Auth.Models.Users;
 
 namespace Template.Auth.Data.Mock.Repositories
 {

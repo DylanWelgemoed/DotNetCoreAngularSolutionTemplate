@@ -3,13 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Template.Auth.ExtensionMethods;
 using Template.Auth.Global;
 using Template.Auth.Interfaces;
-using Template.Auth.Models;
+using Template.Auth.Models.Security;
 using Template.Auth.Processes;
 using Template.Auth.Workflows;
 
@@ -48,16 +50,18 @@ namespace Template.Auth.Controllers
                 return BadRequest("Invalid credentials");
             }
 
-            var claims = new[]
+            var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, credentials.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, await jwtOptions.JtiGenerator()),
                 new Claim(JwtRegisteredClaimNames.Iat, jwtOptions.IssuedAt.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64),
+                identity.FindFirst(Claims.Key),
                 identity.FindFirst(Claims.UserName),
                 identity.FindFirst(Claims.Name),
-                identity.FindFirst(Claims.Email),
-                identity.FindFirst(ClaimTypes.Role)
+                identity.FindFirst(Claims.Email)
             };
+
+            identity.FindAll(ClaimTypes.Role).ToList().ForEach(_ => claims.Add(_));
 
             var jwt = new JwtSecurityToken(
                 issuer: jwtOptions.Issuer,

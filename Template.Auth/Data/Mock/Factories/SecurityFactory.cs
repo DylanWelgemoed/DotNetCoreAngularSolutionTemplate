@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Template.Auth.Models;
+using Template.Auth.Models.Security;
 
 namespace Template.Auth.Data.Mock.Factories
 {
@@ -11,53 +11,53 @@ namespace Template.Auth.Data.Mock.Factories
             {
                 new Credentials
                 {
-                    UserName = "Trudy.Morris",
-                    Password = "Morris"
+                    UserName = "Robin.Shillabeer",
+                    Password = "Shillabeer"
                 },
                 new Credentials
                 {
-                    UserName = "Wes.Braganza",
-                    Password = "Braganza"
+                    UserName = "Florie.Satterfitt",
+                    Password = "Satterfitt"
                 },
                 new Credentials
                 {
-                    UserName = "Nicolais.Albion",
-                    Password = "Albion"
+                    UserName = "Floris.Coyish",
+                    Password = "Coyish"
                 },
                 new Credentials
                 {
-                    UserName = "Adolpho.Blondelle",
-                    Password = "Blondelle"
+                    UserName = "Jasun.Devenport",
+                    Password = "Devenport"
                 },
                 new Credentials
                 {
-                    UserName = "Ramon.Rowat",
-                    Password = "Rowat"
+                    UserName = "Raynell.Dautry",
+                    Password = "Dautry"
                 },
                 new Credentials
                 {
-                    UserName = "Jedidiah.Dines",
-                    Password = "Dines"
+                    UserName = "Fred.Elce",
+                    Password = "Elce"
                 },
                 new Credentials
                 {
-                    UserName = "Harv.Orry",
-                    Password = "Orry"
+                    UserName = "Ebenezer.Gehrts",
+                    Password = "Gehrts"
                 },
                 new Credentials
                 {
-                    UserName = "Charity.Powell",
-                    Password = "Powell"
+                    UserName = "Bibby.Filler",
+                    Password = "Filler"
                 },
                 new Credentials
                 {
-                    UserName = "Gibbie.Gockeler",
-                    Password = "Gockeler"
+                    UserName = "Barnaby.McGray",
+                    Password = "McGray"
                 },
                 new Credentials
                 {
-                    UserName = "Frank.Birrell",
-                    Password = "Birrell"
+                    UserName = "Hakim.Gallen",
+                    Password = "Gallen"
                 }
             };
         }

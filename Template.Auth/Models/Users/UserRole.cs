@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Template.Model.Users
+namespace Template.Auth.Models.Users
 {
     [Flags]
     public enum UserRole

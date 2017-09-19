@@ -1,4 +1,4 @@
-﻿using Template.Auth.Models;
+﻿using Template.Auth.Models.Security;
 
 namespace Template.Auth.Interfaces
 {

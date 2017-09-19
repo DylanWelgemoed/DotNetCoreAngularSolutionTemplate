@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Template.Business.Services;
 using Template.Interface.Repositories;
 
@@ -16,6 +17,7 @@ namespace Template.Api.Controllers
 
         [HttpGet]
         [Route("{userName}")]
+        [Authorize]
         public IActionResult GetUser(string userName)
         {
             return Ok(userService.GetUser(userName));

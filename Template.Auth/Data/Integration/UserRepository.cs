@@ -1,5 +1,5 @@
 ﻿using Template.Auth.Interfaces;
-using Template.Auth.Models;
+using Template.Auth.Models.Users;
 
 namespace Template.Auth.Data.Integration
 {

@@ -1,9 +1,11 @@
-﻿using System.Security.Claims;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using Template.Auth.Global;
 using Template.Auth.Interfaces;
-using Template.Auth.Models;
+using Template.Auth.Models.Security;
 using Template.Auth.Services;
 
 namespace Template.Auth.Workflows
@@ -24,14 +26,15 @@ namespace Template.Auth.Workflows
             if (securityService.AuthenticateCredentials(credentials))
             {
                 var user = userService.GetUser(credentials.UserName);
-                var claims = new[]
+                var claims = new List<Claim>
                 {
+                    new Claim(Claims.Key, user.Key),
                     new Claim(Claims.UserName, user.UserName),
                     new Claim(Claims.Name, $"{user.FirstName} {user.LastName}"),
-                    new Claim(Claims.Email, user.Email),
-                    new Claim(ClaimTypes.Role, user.IsAdmin ? UserRole.Administrator : UserRole.User)
+                    new Claim(Claims.Email, user.EmailAddress)
                 };
 
+                user.Roles.ToList().ForEach(_ => claims.Add(new Claim(ClaimTypes.Role, _.ToString())));
                 return Task.FromResult(new ClaimsIdentity(new GenericIdentity(credentials.UserName, "Token"), claims));
             }
 

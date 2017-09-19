@@ -4750,7 +4750,8 @@
       "Template.Business/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Template.Interface": "1.0.0"
+          "Template.Interface": "1.0.0",
+          "Template.Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Template.Business.dll": {}
@@ -4762,7 +4763,8 @@
       "Template.Integration/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Template.Interface": "1.0.0"
+          "Template.Interface": "1.0.0",
+          "Template.Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Template.Integration.dll": {}
@@ -4773,6 +4775,9 @@
       },
       "Template.Interface/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "Template.Model": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Template.Interface.dll": {}
         },
@@ -4783,13 +4788,23 @@
       "Template.Mock/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Template.Interface": "1.0.0"
+          "Template.Interface": "1.0.0",
+          "Template.Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Template.Mock.dll": {}
         },
         "runtime": {
           "bin/placeholder/Template.Mock.dll": {}
+        }
+      },
+      "Template.Model/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Template.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Template.Model.dll": {}
         }
       }
     }
@@ -12589,6 +12604,11 @@
       "type": "project",
       "path": "../Template.Mock/Template.Mock.csproj",
       "msbuildProject": "../Template.Mock/Template.Mock.csproj"
+    },
+    "Template.Model/1.0.0": {
+      "type": "project",
+      "path": "../Template.Model/Template.Model.csproj",
+      "msbuildProject": "../Template.Model/Template.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {

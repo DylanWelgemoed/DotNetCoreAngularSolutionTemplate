@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Template.Auth.Interfaces;
-using Template.Auth.Models;
+using Template.Auth.Models.Security;
 using IntegrationRepos = Template.Auth.Data.Integration;
 using MockRepos = Template.Auth.Data.Mock.Repositories;
 

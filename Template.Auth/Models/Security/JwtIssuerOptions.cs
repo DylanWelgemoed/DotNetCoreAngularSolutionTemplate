@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Template.Auth.Models
+namespace Template.Auth.Models.Security
 {
     public class JwtIssuerOptions
     {

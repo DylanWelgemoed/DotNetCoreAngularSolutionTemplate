@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using Template.Auth.Data.Mock.Factories;
-using Template.Auth.Models;
+using Template.Auth.Models.Security;
+using Template.Auth.Models.Users;
 
-namespace Template.Auth.Data
+namespace Template.Auth.Data.Mock
 {
     internal static class MockData
     {
